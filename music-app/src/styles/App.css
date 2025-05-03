@@ -1,0 +1,76 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+main {
+  animation: fadeIn 0.5s ease;
+}
+
+.error-message {
+  background-color: rgba(207, 102, 121, 0.1);
+  color: var(--color-error);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.loading p {
+  margin-top: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+.loading-animation {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+  height: 60px;
+}
+
+.loading-animation .bar {
+  width: 6px;
+  background: linear-gradient(to top, var(--color-primary), var(--color-secondary));
+  border-radius: var(--border-radius-sm);
+  animation: soundBars 1.2s infinite ease-in-out;
+}
+
+.loading-animation .bar:nth-child(1) {
+  height: 30%;
+  animation-delay: 0.2s;
+}
+
+.loading-animation .bar:nth-child(2) {
+  height: 60%;
+  animation-delay: 0.4s;
+}
+
+.loading-animation .bar:nth-child(3) {
+  height: 80%;
+  animation-delay: 0.6s;
+}
+
+@keyframes soundBars {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: var(--spacing-md);
+  }
+}

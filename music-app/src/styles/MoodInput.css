@@ -1,0 +1,83 @@
+.mood-input-container {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease;
+}
+
+.mood-input-container h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+}
+
+.mood-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.mood-text-input {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.mood-text-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+}
+
+.mood-text-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.submit-button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.examples {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .mood-form {
+    flex-direction: column;
+  }
+  
+  .mood-input-container {
+    padding: var(--spacing-lg);
+  }
+}
